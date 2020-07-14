@@ -32,17 +32,32 @@ describe('SearchAndSortTab', function(){
            cy.get('[data-dt-idx="2"]').should('have.class', 'current')
        })
 
-       it('Entry and table button', function(){
+       it('Table display rows according to Show Entries value',function(){
+            cy.get('[name="example_length"]').select('10')
+            cy.get('tbody tr').should('have.length','10')
+
             cy.get('[name="example_length"]').select('25')
             cy.get('tbody tr').should('have.length','25')
+
+       })
+
+       it('Order the table by name from Z-A',function(){
+           //Checking order for name
             cy.get('th:nth-child(1)').click().should('have.class','sorting_desc')
             //Checking order for name
             cy.CheckDescendentSortAlpha('tbody tr td:nth-child(1)')
-            //Check sort descendent in age column
-            cy.get('th:nth-child(4)').click().click()
-            cy.CheckSortNum('tr td:nth-child(4)','downward')
+        })
+
+        it('Order the table by age from older to younger',function(){
+             //Check sort descendent in age column
+             cy.get('th:nth-child(4)').click().click()
+             cy.CheckSortNum('tr td:nth-child(4)','downward')
+        })
+
+        it('Order the table by salary, from less to high salary',function(){
             //Check sort upward in salary
             cy.get('th:nth-child(6)').click()
             cy.CheckSortNum('tr td:nth-child(6)','upward')
-       })
+        })
+
 })
