@@ -1,7 +1,8 @@
 Feature: Display
 
-    As a valid user
-    I want to log in into Application
+    On the JavaScript alert page
+    I should be able to throw pop ups
+    when in click on the corresponding buttons
 
     Scenario: Display alert box
         Given I open JavaScript alert page

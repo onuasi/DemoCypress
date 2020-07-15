@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-import DualList from "../../support/pageObject/DualList"
+import DualList from "../../support/pageObject/DualListPage"
 
 describe('jQuery list',function(){
     beforeEach(function(){

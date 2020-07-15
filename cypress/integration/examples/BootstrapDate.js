@@ -11,7 +11,7 @@ describe('Testing Boostrap Date', function(){
         cy.get('.dropdown-menu [href="./bootstrap-date-picker-demo.html"]').click({force:true})
     })
 
-    it('Select data with number',function(){
+    it('Select date with number',function(){
         cy.get('.input-group.date input').should('have.attr','placeholder',this.Dates.defaultDate).click()
         cy.get('.datepicker-days .prev').click()
         cy.get('.datepicker-days tr td').each((el,i,list)=>{
