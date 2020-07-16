@@ -2,6 +2,7 @@
 import DualList from "../../support/pageObject/DualListPage"
 
 describe('jQuery list',function(){
+    
     beforeEach(function(){
         cy.fixture('ListElement').then(function(name){
             this.name = name
@@ -11,6 +12,7 @@ describe('jQuery list',function(){
         cy.get('.navbar-right .dropdown:nth-child(3)').click({force:true})
         cy.get('.dropdown-menu [href="./jquery-dual-list-box-demo.html"]').click({force:true})
     })
+
     it('AddRemove elements',function(){
         this.DualListPage.getListA().select(this.name.nameList[0])
         this.DualListPage.getAdd().click()

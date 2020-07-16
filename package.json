@@ -4,7 +4,8 @@
   "description": "automating https://www.seleniumeasy.com/test",
   "main": "index.js",
   "scripts": {
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "cy:run" : "cypress run"
   },
   "author": "Isabella Ojeda Núñez",
   "license": "ISC",

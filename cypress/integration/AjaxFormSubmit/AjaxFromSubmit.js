@@ -25,8 +25,8 @@ Then('I can see an API code with {int}', nApiCode => {
         cy.wait('@postForm').its('status').should('eq',nApiCode)
 })
 
-Then('I can see the {string} image', imageName => {
-    cy.get('#submit-control img').should('have.attr','src', imageName)
+Then('I can see the {string} image', sImageName => {
+    cy.get('#submit-control img').should('have.attr','src', sImageName)
 })
 
 Then('I can see the word {string} in my screen',() => {

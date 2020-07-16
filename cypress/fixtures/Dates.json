@@ -1,11 +1,11 @@
 {
-    "defaultDate":"dd/mm/yyyy",
-    "defaultStartDate":"Start date",
-    "defaultEndDate":"End date",
-    "date":"06/06/2020",
-    "startDate":"01/05/2020",
-    "endDate":"24/07/2020",
-    "startDate2":"06/07/2020",
-    "endDate2":"09/06/2020",
-    "startDate3":"08/06/2020"
+    "sDefaultDate":"dd/mm/yyyy",
+    "sDefaultStartDate":"Start date",
+    "sDefaultEndDate":"End date",
+    "sDate":"06/06/2020",
+    "sStartDate":"01/05/2020",
+    "sEndDate":"24/07/2020",
+    "sStartDate2":"06/07/2020",
+    "sEndDate2":"09/06/2020",
+    "sStartDate3":"08/06/2020"
 }

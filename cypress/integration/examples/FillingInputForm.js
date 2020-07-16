@@ -3,6 +3,7 @@ import InputForm from '../../support/pageObject/InputFormPage'
 import DemoPage from '../../support/pageObject/DemoPage'
 
 describe('Testing and input form',function(){
+
     it('Fill the entire form',function(){
         DemoPage.goToWeb()
         DemoPage.getMenuListForms().click({force:true})
@@ -36,7 +37,7 @@ describe('Testing and input form',function(){
         .and('have.attr','placeholder','Project Description')
         InputForm.getSubmit().click()
 
-        //Validating some fields after click
+        //Validating some fields after click submit
         InputForm.getFirstName().should('have.value','')
         InputForm.getLastName().should('have.value','')
         InputForm.getEmail().should('have.value','')
