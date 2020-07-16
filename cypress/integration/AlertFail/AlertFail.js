@@ -28,11 +28,13 @@ when ('I click on click button for {string}',(typeBox)=>{
 when ('I should see the {string}',(typeBox)=>{
     if(typeBox=="alertBox"){
         cy.on("window:alert",(text) =>{
+            cy.console('alert')
             expect(text).to.equal('I am an alert box!')
         })
     }
     else{
         cy.on("window:confirm",(text) =>{
+            cy.console('confirm')
             expect(text).to.equal('Press a button!')
         })
     }

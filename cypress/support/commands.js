@@ -21,7 +21,7 @@ Cypress.Commands.add("CheckDescendentSortAlpha", (sElement) => {
         aName.push(el.text())
         sAuxName = el.text()
         if(aName.length>1){
-            for(var i=0; i<aName.length-1;i++-1){
+            for(var i=0; i<aName.length-1;i++){
                 if(sAuxName>aName[i]){
                     aName.splice(i,0,sAuxName)
                     aName.splice(aName.length-1,1)
@@ -45,7 +45,7 @@ Cypress.Commands.add("CheckSortNum", (sElement, sOrder) => {
         sAuxName = el.text()
 
         if(aName.length>1){
-            for(var i=0; i<aName.length-1;i++-1){
+            for(var i=0; i<aName.length-1;i++){
                 if(sOrder == 'upward' && (sAuxName-aName[i])<0 /*sAuxName<aName[i]*/){
                     aName.splice(i,0,sAuxName)
                     aName.splice(aName.length-1,1)
