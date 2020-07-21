@@ -36,6 +36,7 @@ describe('jQuery list',function(){
     })
 
     it('Add all Remove all',function(){
+        //Count existing elements in listA
         var nListACount = 0
         this.DualListPage.getListA().find('option').each((el,i,list)=>{
             nListACount  += 1
@@ -44,6 +45,7 @@ describe('jQuery list',function(){
         this.DualListPage.getAdd().click()
         cy.InTheList(true,'.pickListResult option',this.name.nameList[2])
         this.DualListPage.getAddAll().click()
+        //Count existing elements in List B
         var nListBCount = 0
         this.DualListPage.getListB().find('option').each((el,i,list)=>{
             nListBCount += 1
@@ -56,8 +58,10 @@ describe('jQuery list',function(){
         })
         this.DualListPage.getListB().select(this.name.nameList[1])
         this.DualListPage.getRemove().click()
+        //Element should be in listB but in List A, checking...
         cy.InTheList(false,'.pickListResult option',this.name.nameList[1])
         cy.InTheList(true,'.pickData option',this.name.nameList[1])
+        //Check all the elements are now in list A
         this.DualListPage.getRemoveAll().click().then(()=>{
             this.DualListPage.getListA().find('option').should('have.length',nListACount)
         })

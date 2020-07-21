@@ -73,12 +73,14 @@ Cypress.Commands.add("InTheList",(inList,element,listValue)=>{
         if(el.text() === listValue)
             nfoundData = true
     }).then(()=>{
-        if(inList == true)
-            expect('Element is in the list').to.be.eq('Element is in the list')
-            //expect(nfoundData).to.be.true
+        if(inList == true && nfoundData== true)
+            expect('Element "' + listValue + '" is in the list').to.be.eq('Element "' + listValue + '" is in the list')
+        else if (inList == false && nfoundData== false)
+        expect('Element "' + listValue + '" is NOT in the list').to.be.eq('Element "' + listValue + '" is NOT in the list')
+        //When conditions are not fulfilled
         else
-        expect('Element is NOT in the list').to.be.eq('Element is NOT in the list')
-            //expect(nfoundData).to.be.false
+            expect('Is '  + nfoundData + ' that element "' + listValue + '" should be in the list').to.be.
+            eq('Is '  + inList + ' that element "' + listValue + '" should be in the list')
     })
 })
 // -- This is a child command --
