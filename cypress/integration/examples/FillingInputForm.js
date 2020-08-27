@@ -15,6 +15,7 @@ describe('Testing and input form',function(){
             return false
           })
 
+        //All hardcoded
         InputForm.getFirstName().click().type('Gabriela').should('have.value','Gabriela')
         .and('have.attr','placeholder','First Name')
         InputForm.getLastName().click().type('Lopez').should('have.value','Lopez')
